@@ -39,6 +39,6 @@ During inference, the predicted coordinates should be converted back to the orig
 
 ## Notes
 
-* The released dataset is identical to the one used in the experiments reported in the paper.
+* The released dataset is identical to the one used in the experiments reported in the main text.
 * No additional preprocessing is required before training.
 * Users should load `scaler_coord.pkl` when converting model predictions to the original coordinate space.
