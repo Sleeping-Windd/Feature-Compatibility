@@ -12,11 +12,9 @@ if github_dir not in sys.path:
 
 from DataModel import LSTMDataset, LSTMModel, train_lstm_with_preprocessed
 
-#X_input_net= np.load("./datasets/guiderail/train_input.npy")  # (N, 50, 32)
-#Y_target   = np.load("./datasets/guiderail/train_target.npy")         # (N, 8)
+X_input_net= np.load("./datasets/guiderail/train_input.npy")  # (N, 50, 32)
+Y_target   = np.load("./datasets/guiderail/train_target.npy")         # (N, 8)
 
-X_input_net= np.load(r"E:\Linjy\JProject\EyeTracking\NC_Combine\2_MainBody\NonPCA\Data\X_input_net.npy")  # (N, 50, 32)
-Y_target   = np.load(r"E:\Linjy\JProject\EyeTracking\NC_Combine\2_MainBody\NonPCA\Data\Y_target.npy")         # (N, 8)
 if isinstance(X_input_net, np.ndarray):
     X_input_net = torch.from_numpy(X_input_net).float()
 X_input_net = torch.cat([X_input_net[:, :, :8], X_input_net[:, :, 32:34]],dim=2)
